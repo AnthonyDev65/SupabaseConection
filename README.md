@@ -26,3 +26,13 @@ const supabaseKey = import.meta.env.PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY
 
 export const supabase = createClient(supabaseUrl, supabaseKey)
 ```
+En mi Index.html
+
+```
+import { supabase } from '../lib/supabase'
+
+const { data: <El Objeto que quieres exportar>, error } = await supabase
+	.from('<El Objeto que quieres exportar>')
+	.select('*')
+
+```
