@@ -9,16 +9,20 @@ Cree el .env en carpeta Raiz
 
 Contenido:
 
+```
 PUBLIC_SUPABASE_URL= [Key]
 PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY= [Key]
+```
 
 Cree la ruta " `src/lib/supabase.js`
 
 Contenido:  
 
+```
 import { createClient } from '@supabase/supabase-js'
 
 const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL
 const supabaseKey = import.meta.env.PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY
 
 export const supabase = createClient(supabaseUrl, supabaseKey)
+```
